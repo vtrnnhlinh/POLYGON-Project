@@ -1,0 +1,275 @@
+\documentclass{beamer}
+\usetheme{Copenhagen}
+\usepackage[utf8]{vietnam}
+
+\title{POLYGON Project: Session 3}
+\subtitle{Mathematics 1 - Logic and Proofs}
+\author{Linh}
+\date{2023-04-08}
+
+\begin{document}
+
+\frame{\titlepage}
+\begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents
+    \end{frame}
+    \AtBeginSubsection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+\section{Introduction}
+\begin{frame}
+\frametitle{Introduction}
+
+\begin{definition}{Logic}
+    \textit{is the basis of all mathematical reasoning.}
+    \end{definition}
+
+\end{frame}
+\begin{frame}
+    \frametitle{How to understand mathematics?}
+    \begin{itemize}
+        \item We must understand \textbf{what makes up} a correct mathematical argument. That is \textbf{proof} (chứng minh).
+
+        \item We prove a mathematical statement is true $\longrightarrow$ \textbf{theorem} (định lí).
+
+        \item To learn a mathematica topic, you need to \textbf{construct} mathematical arguments on this topic, not just read exposition.
+    \end{itemize}
+    \end{frame}
+\begin{frame}
+    \frametitle{What you should expect after this session?}
+        \begin{itemize}
+            \item Explain \textbf{what makes up} a correct mathematical argument.
+            \item Introduce \textbf{tools} to construct these arguments.
+        \end{itemize}
+    \end{frame}
+\section{Propositional Logic (Logic mệnh đề)}    
+\begin{frame}
+    \frametitle{Propositions (Mệnh đề)}
+    \begin{definition}{Proposition}
+        \textit{is a declarative sentence (fact) that is either true or false, but not both.}
+        \end{definition}
+    \end{frame}
+    \begin{frame}
+        \frametitle{Propositions (Mệnh đề)}
+        \begin{itemize}
+            \item Denote: use letters like \textit{p, q, r, s, t,...} to denote propositions.
+            \item \textbf{Truth value} of a proposition: \textit{true} denoted by T or \textit{false} denoted by F.
+            \item \textbf{Compound propositions} (mệnh đề phức hợp) are formed by combining propositions using \textbf{logical operators} (toán tử logic).
+        \end{itemize}
+        \end{frame}
+\subsection{Negation (Phủ định)}
+\begin{frame}
+    \frametitle{Negation (Phủ định)}
+        Let \textit{p} be a proposition. The \textbf{negation} of \textit{p} ($\neg p$ - not p), is the statement: \textit{"It is not the case that p"}.
+
+        The truth value of $\neg p$ is the opposite of the truth value of \textit{p}.
+    \end{frame}
+    \begin{frame}
+        \frametitle{Truth Table (Bảng chân trị)}
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                p & $\neg p$\\
+                \hline
+                T & F \\
+                \hline
+                F & T \\
+                \hline
+            \end{tabular}
+            \end{center}
+        \end{frame}
+        \begin{frame}
+            \frametitle{Ví dụ}
+
+            \end{frame}
+\subsection{Conjunction (Kết hợp, phép hội)}
+\begin{frame}
+    \frametitle{Conjunction (Kết hợp)}
+    Let \textit{p} and \textit{q} be propositions. The \textbf{conjunction} of \textit{p} and \textit{q} ($p \wedge q$ - p and q) is the proposition "p and q". The conjunction $p \wedge q$ is true when both p and q are true and is false otherwise.
+    \end{frame}
+\begin{frame}
+    \frametitle{Truth Table (Bảng chân trị)}
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            p & q & $p \wedge q$\\
+            \hline
+            T & T & T \\
+            \hline
+            T & F & F \\
+            \hline
+            F & T & F \\
+            \hline
+            F & F & F \\
+            \hline
+        \end{tabular}
+        \end{center}
+\end{frame}
+\begin{frame}
+    \frametitle{Ví dụ}
+
+    \end{frame}
+\subsection{Disjunction (Phân hợp, phép tuyển)}
+\begin{frame}
+    \frametitle{Disjunction (Phân hợp)}
+    Let \textit{p} and \textit{q} be propositions. The \textbf{disjunction} of \textit{p} and \textit{q} ($p \vee q$ - p or q) is the proposition "p or q". The disjunction $p \vee q$ is false when both p and q are false and is true otherwise.
+\end{frame}
+\begin{frame}
+    \frametitle{Truth Table (Bảng chân trị)}
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            p & q & $p \vee q$\\
+            \hline
+            T & T & T \\
+            \hline
+            T & F & T \\
+            \hline
+            F & T & T \\
+            \hline
+            F & F & F \\
+            \hline
+        \end{tabular}
+        \end{center}
+        \end{frame}
+\begin{frame}
+    \frametitle{Ví dụ}
+\end{frame}
+\subsection{Exclusive OR - XOR}
+\begin{frame}
+    \frametitle{Exclusive OR - XOR}
+    Let \textit{p} and \textit{q} be propositions. The \textbf{exclusive OR} of \textit{p} and \textit{q} ($p \oplus q$ - p xor q) is the proposition "p xor q". The exclusive OR $p \oplus q$ is true when exactly one of p and q is true and is false otherwise.
+\end{frame}
+\begin{frame}
+    \frametitle{Truth Table (Bảng chân trị)}
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            p & q & $p \oplus q$\\
+            \hline
+            T & T & F \\
+            \hline
+            T & F & T \\
+            \hline
+            F & T & T \\
+            \hline
+            F & F & F \\
+            \hline
+        \end{tabular}
+        \end{center}
+        \end{frame}
+\begin{frame}
+    \frametitle{Ví dụ}
+\end{frame}
+\subsection{Implication (Mệnh đề kéo theo)}
+\begin{frame}
+    \frametitle{Implication (Mệnh đề kéo theo)}
+    Let \textit{p} and \textit{q} be propositions. The \textbf{conditional statement} of \textit{p} and \textit{q} ($p \rightarrow q$ - p implies q) is the proposition "p implies q". The conditional statement $p \rightarrow q$ í false when p is true and q is false, and true otherwise.
+
+    \textit{p} is called \textbf{hypothesis}. \textit{q} is called \textbf{conclusion}. 
+\end{frame}
+\begin{frame}
+    \frametitle{Truth Table (Bảng chân trị)}
+    \begin{center}
+        \begin{tabular}{|c|c|c|}
+            \hline
+            p & q & $p \rightarrow q$\\
+            \hline
+            T & T & T \\
+            \hline
+            T & F & F \\
+            \hline
+            F & T & T \\
+            \hline
+            F & F & T \\
+            \hline
+        \end{tabular}
+        \end{center}
+        \end{frame}
+\begin{frame}
+    \frametitle{Ways to express}
+    $$ p \rightarrow q$$
+    \begin{itemize}
+        \item "if p, then q"
+        \item "if p, q"
+        \item "p is sufficient for q"
+        \item "q if p"
+        \item "q when p"
+        \item "a necessary condition for p is q"
+        \item "q unless $\neg p$
+        \end{itemize}
+    \end{frame}
+    \begin{frame}
+        \frametitle{Ways to express}
+        \begin{itemize}
+            \item "p implies q"
+            \item "p only if q"
+            \item "a sufficient condition for q is p"
+            \item "q whenever p"
+            \item "q is necessary for p"
+            \item "q follows from p"
+            \item "q provided that p"
+            \end{itemize}
+        \end{frame}
+\section{Exercise}
+\begin{frame}
+    \frametitle{Exercise 1}
+    Suppose that Smartphone A has 256MB RAM and 32 GB ROM, and the resolution of its camera is 8 MP; Smartphone B has 288 MB RAM and 64 GB ROM, and the resolution of its camera is 4 MP; and Smartphone C has 128 MB RAM and 32 GB ROM, and the resolution of its camera is 5 MP. Determine the truth value of each of these propositions.
+\end{frame}
+\begin{frame}
+    \frametitle{Exercise 1}
+    \begin{enumerate}
+        \item Smartphone B has the most RAM of these three smartphones.
+        \item Smartphone C has more ROM or a higher resolution camera than Smartphone B.
+        \item Smartphone B has more RAM, more ROM, and a higher resolution camera than Smartphone A.
+        \item If Smartphone B has more RAM and more ROM than Smartphone C, then it also has a higher resolution camera.
+        \item Smartphone A has more RAM than Smartphone B if and only if Smartphone B has more RAM than Smartphone A.
+    \end{enumerate}
+\end{frame}
+\begin{frame}
+    \frametitle{Exercise 2}
+    Let \textit{p} and \textit{q} be the propositions.
+    \begin{itemize}
+        \item \textit{p}: You drive over 65 miles per hour.
+        \item \textit{q}: You get a speeding ticket.
+        \end{itemize}
+
+        Write these propositions using \textit{p} and \textit{q} and logical connectives (including negations).
+\end{frame}
+\begin{frame}
+    \frametitle{Exercise 2}
+    \begin{enumerate}
+        \item You do not driver over 65 miles per hour.
+        \item You drive over 65 miles per hour, but you do not get a speeding ticket.
+        \item You will get a speeding ticket if you drive over 65 miles per hour.
+        \item If you do not driver over 65 miles per hour, then you will not get a speeding ticket.
+        \item Driving over 65 miles per hour is sufficient for getting a speeding ticket.
+        \item You get a speeding ticket, but you do not drive over 65 miles per hour.
+        \item Whenever you get a speeding ticket, you are driving over 65 miles per hour.
+    \end{enumerate}
+\end{frame}
+\begin{frame}
+    \frametitle{Exercise 3}
+    Determine whether each of these conditional statements is true or false.
+    \begin{enumerate}
+        \item If $1+1=2$, then $2=2=5$.
+        \item If $1+1 =3$, then $2+2=4$.
+        \item If $1+1 = 3$, then $2+2 =5$.
+        \item If monkeys can fly, then $1+1 =3$.
+    \end{enumerate}
+\end{frame}
+\begin{frame}
+    \frametitle{Exercise 4}
+    Construct a truth table for each of these compound propositions.
+    \begin{enumerate}
+        \item $p \wedge \neg q$
+        \item $p \vee \neg p$
+        \item $(p \vee \neg q)\rightarrow q$
+    \end{enumerate}
+\end{frame}
+\end{document}
